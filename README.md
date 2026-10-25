@@ -29,7 +29,7 @@
   <img src="docs/assets/today-light.png" alt="Today view with work and personal tasks, project labels, a deadline, and a separate This Evening section." width="100%">
 </picture>
 
-<p align="center"><sub>Your priorities for the day, with a little space for the evening. Screenshots use fictional demo content.</sub></p>
+<p align="center"><sub>Your priorities for the day, with a little space for the evening. Fictional demo content.<br>Open full size: <a href="docs/assets/today-light.png">Light</a> · <a href="docs/assets/today-dark.png">Dark</a></sub></p>
 
 ## Features
 
@@ -56,6 +56,8 @@ Areas keep work and personal plans separate. Projects bring the related tasks to
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/project-dark.png">
   <img src="docs/assets/project-light.png" alt="Website refresh project in the Studio area, organized under Discover, Design and build, and Ready to launch headings." width="100%" loading="lazy">
 </picture>
+
+<p align="center"><sub>Open full size: <a href="docs/assets/project-light.png">Light</a> · <a href="docs/assets/project-dark.png">Dark</a></sub></p>
 
 ### Enough detail to move forward
 
