@@ -50,3 +50,14 @@ This SHA-256 identifies the artifact that was audited and runtime-tested. It is 
 - Only after release gates pass: publish the binary and notices, publish a checksum, wire the README download link, download the public asset again, and verify its hash.
 
 Raw local runtime traces contain machine-specific paths and therefore are not uploaded. This public summary retains the relevant outcomes and limitations without exposing private task data or development source.
+
+## Public README checks
+
+The live GitHub repository page was checked at **1440px and 390px widths**, in **light and dark appearance**. In each of the four combinations:
+
+- All eight README images loaded.
+- All four picture elements selected the expected theme-specific capture.
+- All seventeen rendered in-page anchor references resolved.
+- No horizontal overflow was detected inside the README.
+
+Full-size light/dark links accompany the full-window screenshots so narrow-screen readers can inspect the interface at its original resolution. These checks establish presentation behavior, not executable release readiness.
