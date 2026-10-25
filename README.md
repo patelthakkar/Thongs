@@ -2,13 +2,15 @@
 
 **A firm grip on your day.**
 
+*Version 0.1.0 · Local Edition*
+
 Thongs 3 is a local-first task manager for Windows. It keeps your to-dos close, your projects together, and your data out of everybody else's cloud.
 
 One executable. No installer. No account. No subscription. No browser. No internet connection required.
 
 ## Put it on
 
-1. Download the latest Windows build from **Releases** (`Thongs-Local-0.1.0-Windows-x64.exe`).
+1. Get the Windows executable (`Thongs-Local-0.1.0-Windows-x64.exe`).
 2. Double-click it.
 3. Start with the Inbox. Add a to-do. Breathe.
 
