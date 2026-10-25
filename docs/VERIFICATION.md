@@ -63,3 +63,9 @@ The live GitHub repository page was checked at **1440px and 390px widths**, in *
 - No horizontal overflow was detected inside the README.
 
 Full-size light/dark links accompany the full-window screenshots so narrow-screen readers can inspect the interface at its original resolution. These checks establish presentation behavior, not executable release readiness.
+
+## Public asset download verification
+
+After publication, all six uploaded release assets were downloaded anonymously through their public GitHub URLs. Each returned HTTP 200. The executable and four license/notices files match the five entries in the downloaded `SHA256SUMS.txt`; the executable also matches the independently audited/runtime-tested local artifact byte count and SHA-256 above.
+
+This verifies delivery of the selected experimental build. It does not fix or waive the known multi-window persistence failure, and it is not a stable-release acceptance result.
