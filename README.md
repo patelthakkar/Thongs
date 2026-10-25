@@ -1,8 +1,6 @@
 # Thongs 3
 
-**A firm grip on your day.**
 
-*Version 0.1.0 · Local Edition*
 
 Thongs 3 is a local-first task manager for Windows. It keeps your to-dos close, your projects together, and your data out of everybody else's cloud.
 
@@ -16,7 +14,7 @@ One executable. No installer. No account. No subscription. No browser. No intern
 
 Windows 10/11, 64-bit. The executable is unsigned, so Windows may ask whether you are sure. You are.
 
-## What's in the drawer
+## What's it does
 
 - **Inbox, Today, This Evening, Upcoming, Tomorrow, Anytime, Someday, Logbook, Trash.**
 - **Projects, areas, headings, progress rings.** Everything has a place. Some places have subplaces.
@@ -32,7 +30,6 @@ Windows 10/11, 64-bit. The executable is unsigned, so Windows may ask whether yo
 ## What it doesn't do
 
 - No accounts, analytics, telemetry or network calls.
-- No cloud sync. The cloud is a drawer.
 - No connected calendars, reminders import, mail capture or subscription upsell.
 - No notifications after the app closes. Reminders live in the app while it is running.
 - No phones, tablets, watches or headsets. This one is for the computer you already have.
