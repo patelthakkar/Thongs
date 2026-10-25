@@ -21,8 +21,13 @@
   <a href="#project-status">Project status</a>
 </p>
 
-> [!NOTE]
-> **Preview, not a production release.** Development source remains private. The public executable is held while a multi-window persistence failure found during release testing is resolved. See [project status](#project-status).
+> [!WARNING]
+> **Experimental preview—known data-loss risk.** A newly entered task can disappear with a second window open. Use disposable example data only, not important tasks. This is not a stable release. See [verification notes](docs/VERIFICATION.md).
+
+<p align="center">
+  <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/Thongs-Local-0.1.0-Windows-x64.exe"><strong>Download experimental preview · Windows x64</strong></a><br>
+  <sub><a href="https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1">Release notes</a> · <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/SHA256SUMS.txt">SHA-256 checksums</a></sub>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/today-dark.png">
@@ -83,9 +88,23 @@ The images above are captures of the app's actual interface, rendered with ficti
 
 ## Availability
 
-**No public download is available yet.** A rebuilt executable exists locally, but release testing exposed a multi-window persistence failure. Publication is on hold rather than distributing a build with a known data-loss risk. This repository contains documentation and screenshots; cloning it will not produce a runnable app.
+**An experimental pre-release is available:** [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1). It contains the rebuilt `0.1.0` application, not a fix for the known multi-window persistence failure. Download it only for evaluation with disposable data.
 
-The local **0.1.0** build targets **Windows 10/11, 64-bit** and is packaged as a single portable executable, with no installer, account, or runtime internet connection required. The executable is unsigned; Windows may display a security warning. Verify the origin of any build before running it, and do not disable security protections to launch it.
+### Installation
+
+1. Download the [Windows x64 executable](https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/Thongs-Local-0.1.0-Windows-x64.exe) and [SHA256SUMS.txt](https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/SHA256SUMS.txt).
+2. In PowerShell, check the downloaded executable:
+
+   ```powershell
+   Get-FileHash .\Thongs-Local-0.1.0-Windows-x64.exe -Algorithm SHA256
+   ```
+
+   Compare the result with `SHA256SUMS.txt` and the release notes. If it differs, do not run the file.
+3. Double-click the executable. No installer, Node.js installation, account, or runtime internet connection is required.
+
+The build targets **Windows 10/11, 64-bit**. The executable is unsigned; Windows may show a security warning or block execution. Verify its origin and checksum, and do not disable security protections or bypass organizational policy to launch it. Export a separate backup before trying this build with an existing local library.
+
+Development source remains private. This repository contains documentation and artwork; cloning it will not produce a runnable app. GitHub's automatically generated source archives contain this documentation repository, not the application's development source.
 
 ## Privacy & backups
 
@@ -100,7 +119,7 @@ Cloud sync, shared lists, connected calendars, mail capture, and mobile apps are
 
 **Early-stage local build · version 0.1.0.** The interface and core workflows are implemented, but this is not a production-certified Windows release.
 
-The current rebuild passes **38 model checks**, **31 browser scenarios**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver successfully exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened. The executable will not be published while this gate is unresolved. See [verification notes](docs/VERIFICATION.md).
+The current rebuild passes **38 model checks**, **31 browser scenarios**, **11 macOS Electron checks**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver successfully exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened. The maintainer has requested publication of this exact build as an experimental pre-release; the issue remains unresolved. See [verification notes](docs/VERIFICATION.md).
 
 **CrossOver testing is not native Windows testing.** Windows 10/11 installation testing, DPI scaling, native file pickers, and full visual/accessibility validation remain outstanding. Do not use the local prototype for important data.
 

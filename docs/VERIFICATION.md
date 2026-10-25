@@ -2,7 +2,9 @@
 
 ## Current decision
 
-**Public documentation is available; the executable is not released.** A Windows-executable runtime test reproduced loss of a newly entered task with a second window open. The release is held pending a persistence fix and a fresh regression pass. A visually refreshed build is not automatically a safe build.
+**The current executable is published as an experimental pre-release at the maintainer's explicit request.** A Windows-executable runtime test reproduced loss of a newly entered task with a second window open. This remains unresolved and blocks treating the build as stable. Use disposable example data only. Publication is not a claim that the failing check has passed or that the app is safe for important tasks.
+
+Release: [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1). Application version inside the executable: `0.1.0`.
 
 The work is limited to original artwork, presentation copy, and packaging/notices. No application persistence logic, storage key, application ID, library schema, or library location was changed. Development source remains outside this public repository.
 
@@ -34,20 +36,20 @@ This supports a pending-save/incoming-update timing problem; it is not a complet
 
 ## Local artifact identity
 
-The unreleased rebuilt executable is `Thongs-Local-0.1.0-Windows-x64.exe`, 110,665,775 bytes.
+The published experimental executable is `Thongs-Local-0.1.0-Windows-x64.exe`, 110,665,775 bytes.
 
 ```text
 ccb79fc259081f1aeff524fde3f250ff1b9824bc1ae03fa66895f19805b12f4f
 ```
 
-This SHA-256 identifies the artifact that was audited and runtime-tested. It is **not** a checksum for a public download; no release asset is available. Any later rebuilt artifact needs its own audit, tests, and checksum.
+This SHA-256 identifies the exact artifact that was audited, runtime-tested, and selected for the experimental release. [SHA256SUMS.txt](https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/SHA256SUMS.txt) also covers the accompanying license/notices assets. Any later rebuilt artifact needs its own audit, tests, and checksum.
 
 ## Remaining verification
 
 - Fix the persistence failure with explicit approval for that narrow logic change; test task creation, edits, concurrent windows, and restart persistence.
 - Repeat the unmodified full Windows-executable workflow and restart checks against the final artifact hash.
 - Native Windows 10/11 testing, DPI scaling, native file-picker interaction, and full accessibility validation remain outstanding. CrossOver is not a Windows installation; file-picker responses are substituted in automation.
-- Only after release gates pass: publish the binary and notices, publish a checksum, wire the README download link, download the public asset again, and verify its hash.
+- Before a stable release, resolve the failing persistence gate and repeat verification. The current public pre-release deliberately retains and discloses that failure.
 
 Raw local runtime traces contain machine-specific paths and therefore are not uploaded. This public summary retains the relevant outcomes and limitations without exposing private task data or development source.
 
