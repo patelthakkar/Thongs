@@ -1,79 +1,121 @@
-# Thongs 3
+<p align="center">
+  <img src="docs/assets/banner.png" alt="Thongs 3 — Your day. In focus. A local-first task manager for Windows." width="100%">
+</p>
 
+<p align="center">
+  <strong>Make room for what matters. Keep your plans on your own computer.</strong><br>
+  Capture ideas, organize projects, and focus on today—without an account or an internet connection.
+</p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/version-0.1.0-438de7?style=flat-square" alt="Version 0.1.0">
+  <img src="https://img.shields.io/badge/platform-Windows_10%2F11_x64-303a49?style=flat-square" alt="Target platform: Windows 10 and 11, 64-bit">
+  <img src="https://img.shields.io/badge/data-local_only-317568?style=flat-square" alt="App data stays local">
+</p>
 
-Thongs 3 is a local-first task manager for Windows. It keeps your to-dos close, your projects together, and your data out of everybody else's cloud.
+<p align="center">
+  <a href="#features">Features</a> ·
+  <a href="#a-closer-look">Screenshots</a> ·
+  <a href="#availability">Availability</a> ·
+  <a href="#privacy--backups">Privacy</a> ·
+  <a href="#project-status">Project status</a>
+</p>
 
-One executable. No installer. No account. No subscription. No browser. No internet connection required.
+> [!NOTE]
+> **Preview, not a production release.** Development source remains private. The public executable is held while a multi-window persistence failure found during release testing is resolved. See [project status](#project-status).
 
-## Put it on
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/today-dark.png">
+  <img src="docs/assets/today-light.png" alt="Today view with work and personal tasks, project labels, a deadline, and a separate This Evening section." width="100%">
+</picture>
 
-1. Get the Windows executable (`Thongs-Local-0.1.0-Windows-x64.exe`).
-2. Double-click it.
-3. Start with the Inbox. Add a to-do. Breathe.
+<p align="center"><sub>Your priorities for the day, with a little space for the evening. Screenshots use fictional demo content.</sub></p>
 
-Windows 10/11, 64-bit. The executable is unsigned, so Windows may ask whether you are sure. You are.
+## Features
 
-## What's it does
+- **A place for every plan.** Capture in Inbox, focus in Today, look ahead in Upcoming, and keep future ideas in Anytime or Someday. Completed work moves to Logbook.
+- **Projects with structure.** Group projects into areas, break them into headings, and track progress as you complete to-dos.
+- **Details when you need them.** Add notes, checklists, tags, start dates, deadlines, and in-app reminders without losing the bigger picture.
+- **Fast capture and search.** Use global Quick Entry to save an idea without switching away from your work. Quick Find reaches tasks, lists, tags, notes, and checklists.
+- **Routines that repeat.** Repeat after completion or on a fixed schedule, with weekly, monthly, and yearly rules, pause/resume, and next-date overrides.
+- **A desktop that fits your day.** Light, dark, and system appearance, automatic local saving, and portable JSON backups.
 
-- **Inbox, Today, This Evening, Upcoming, Tomorrow, Anytime, Someday, Logbook, Trash.**
-- **Projects, areas, headings, progress rings.** Everything has a place. Some places have subplaces.
-- **Quick Entry** from a global shortcut, with notes, dates, tags, checklists, deadlines and a destination.
-- **Quick Find** across lists, tags, notes, checklists and the Logbook.
-- **Tags, deadlines, reminders, checklists and notes.** All the small labels that make a large day behave.
-- **Repeating to-dos** after completion or on a fixed schedule, with weekly weekdays, monthly and yearly rules, last-weekday options, pause/resume, early next copies and a one-time next-date override.
-- **Multiple windows** with a three-way merge. Edit in two places; keep both changes.
-- **All Projects, Logged Projects, Deadlines and tag lists**, grouped the way a tidy person would group them.
-- **Light, dark and system appearance.**
-- **Backups** in plain JSON, because your to-dos should not require a rescue party.
+## A simple workflow
 
-## What it doesn't do
+1. **Capture first.** Put a thought in Inbox or use Quick Entry. You can organize it later.
+2. **Give it a home.** Move related to-dos into a project, add a heading, and set a date only when it helps.
+3. **Focus on today.** Choose what matters now, leave evening plans for later, and let Logbook hold what is done.
 
-- No accounts, analytics, telemetry or network calls.
-- No connected calendars, reminders import, mail capture or subscription upsell.
-- No notifications after the app closes. Reminders live in the app while it is running.
-- No phones, tablets, watches or headsets. This one is for the computer you already have.
-- No forty-seven-step onboarding. There is an Inbox. Start there.
+## A closer look
 
-## The fit
+### From a big idea to clear next steps
 
-Your library is a JSON file in the app's own application-data folder, with a previous-save backup. Export and import live in **Settings → Local Library**. Nothing leaves the machine.
+Areas keep work and personal plans separate. Projects bring the related tasks together; headings make the next step easier to see.
 
-No name, email address, account, machine ID or usage record is collected. The app makes no network requests.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/project-dark.png">
+  <img src="docs/assets/project-light.png" alt="Website refresh project in the Studio area, organized under Discover, Design and build, and Ready to launch headings." width="100%" loading="lazy">
+</picture>
 
-## Build it
+### Enough detail to move forward
 
-Requires Node.js 24+ and npm:
+Keep the context and the checklist with the task—not in a separate document you have to find again.
 
-```sh
-npm ci
-npm run build
-npm start
-npm run dist:win
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/task-detail-dark.png">
+  <img src="docs/assets/task-detail.png" alt="Expanded task with a note, a three-step checklist, a Focus tag, and a Today start date." width="100%" loading="lazy">
+</picture>
 
-The Windows release is one portable executable.
+### Catch an idea without breaking your flow
 
-## Test it
+Quick Entry gives a passing thought a place to land. Add the essentials, choose a destination, and get back to what you were doing.
 
-```sh
-npm test
-npm run test:ui
-node scripts/desktop-smoke.mjs
-node scripts/windows-acceptance.mjs
-node scripts/branding-audit.mjs
-node scripts/pii-audit.mjs
-```
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/quick-entry-dark.png">
+    <img src="docs/assets/quick-entry.png" alt="Quick Entry panel with a task title, note, scheduling controls, Inbox destination, and Save button." width="560" loading="lazy">
+  </picture>
+</p>
 
-The suite covers 38 model and merge checks, 31 browser scenarios, 11 packaged desktop checks, 19 Windows executable workflows, and 21 visual comparisons. More checks than a swimming-pool locker room.
+The images above are captures of the app's actual interface, rendered with fictional demo data—not design mockups. They are browser-rendered previews, not proof of native Windows behavior. See [visual notes](docs/VISUALS.md).
 
-## Known snug spots
+## Availability
 
-- Same-field edits from two windows resolve to the latest save. Different fields merge.
-- Fonts and native materials are close, not identical.
-- Some hover, focus, error and animation states are not exhaustively certified.
-- Cloud and connected calendar/reminder services are deliberately absent.
+**No public download is available yet.** A rebuilt executable exists locally, but release testing exposed a multi-window persistence failure. Publication is on hold rather than distributing a build with a known data-loss risk. This repository contains documentation and screenshots; cloning it will not produce a runnable app.
 
-## License
+The local **0.1.0** build targets **Windows 10/11, 64-bit** and is packaged as a single portable executable, with no installer, account, or runtime internet connection required. The executable is unsigned; Windows may display a security warning. Verify the origin of any build before running it, and do not disable security protections to launch it.
 
-Private build. All thongs reserved.
+## Privacy & backups
+
+- **Local storage.** Your library is saved as JSON in the app's application-data folder, with a previous-save backup.
+- **No app telemetry.** The local build has no analytics, account system, or application network requests.
+- **Portable backups.** Export and import ordinary JSON files from **Settings → Local Library**. Import replaces the current library, so export a backup first.
+- **Plain text, not a vault.** JSON backups are not encrypted. Treat your library and exported files as sensitive, and keep a separate backup somewhere you trust.
+
+Cloud sync, shared lists, connected calendars, mail capture, and mobile apps are outside this build's scope.
+
+## Project status
+
+**Early-stage local build · version 0.1.0.** The interface and core workflows are implemented, but this is not a production-certified Windows release.
+
+The current rebuild passes **38 model checks**, **31 browser scenarios**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver successfully exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened. The executable will not be published while this gate is unresolved. See [verification notes](docs/VERIFICATION.md).
+
+**CrossOver testing is not native Windows testing.** Windows 10/11 installation testing, DPI scaling, native file pickers, and full visual/accessibility validation remain outstanding. Do not use the local prototype for important data.
+
+Known limitations:
+
+- Reminders appear while the app is running; they do not fire after it closes.
+- Multi-window editing is not currently safe for important data. Same-field conflict resolution is latest-save-wins, and a separate pending-save failure is under investigation.
+- Fonts, native controls, and some focus, hover, error, and animation states are not fully validated.
+
+### Feedback
+
+Have a question or spotted something unclear? [Open an issue](https://github.com/patelthakkar/Thongs/issues/new). For a bug report, include the build version, Windows version, steps to reproduce, and what you expected. Remove personal task content from screenshots and logs; do not attach your library or backup files.
+
+## License & attribution
+
+Development source is not published. The [binary use license](LICENSE-BINARY.txt) permits running a published build for personal and internal business use; it does not grant an open-source license or permission to redistribute the application. Electron packages necessarily include executable JavaScript, so private development source is not a promise of protection against reverse engineering.
+
+The banner and replacement interface graphics are original project artwork, not recolored vendor assets. React, React DOM, Scheduler, Lucide, Electron, and Chromium retain their own licenses; see [third-party notices](THIRD-PARTY-NOTICES.txt).
+
+Thongs 3 is an independent project inspired by Things 3, with a name that takes itself a little less seriously. It is not affiliated with, endorsed by, or an official Windows version of Things or Cultured Code. See [visual notes](docs/VISUALS.md) for image provenance.
