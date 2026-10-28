@@ -121,8 +121,6 @@ Cloud sync, shared lists, connected calendars, mail capture, and mobile apps are
 
 The current rebuild passes **38 model checks**, **31 browser scenarios**, **11 macOS Electron checks**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver successfully exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened. The maintainer has requested publication of this exact build as an experimental pre-release; the issue remains unresolved. See [verification notes](docs/VERIFICATION.md).
 
-**CrossOver testing is not native Windows testing.** Windows 10/11 installation testing, DPI scaling, native file pickers, and full visual/accessibility validation remain outstanding. Do not use the local prototype for important data.
-
 Known limitations:
 
 - Reminders appear while the app is running; they do not fire after it closes.
