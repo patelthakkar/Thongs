@@ -1,8 +1,30 @@
 # Verification and release gate
 
-## Current decision
+## 0.2.0 build
 
-**The current executable is published as an experimental pre-release at the maintainer's explicit request.** A Windows-executable runtime test reproduced loss of a newly entered task with a second window open. This remains unresolved and blocks treating the build as stable. Use disposable example data only. Publication is not a claim that the failing check has passed or that the app is safe for important tasks.
+Release: [v0.2.0](https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0). Application version inside the executable: `0.2.0`.
+
+Artifact: `Thongs-Local-0.2.0-Windows-x64.exe`, 110,624,221 bytes.
+
+```text
+28ee8d99606b775927f7211fbb34f09394a19d1b57768836b352275779f74905
+```
+
+Built on Windows 11 from the `windows/` tree at the `v0.2.0` tag, with Node.js 22.23.4, electron-builder 26.18.0, and Electron 45.0.0. The source change from `0.1.0` is confined to the Windows shell: the first-close prompt, the close-to-taskbar preference, the tray menu, the Settings toggle, and restoring a hidden window on a second launch.
+
+Smoke-tested on this machine:
+
+- the executable launches and reports version `0.2.0`;
+- the first close shows **“Close to taskbar? (Necessary for quick entry)”** with **Remember my choice**;
+- Yes hides the window and writes `preferences.json`; the registered global shortcut opens Quick Entry (F9 in the test, because another application held `Control+Space` on this desktop at the time);
+- **Settings → Quick Entry → Exit to taskbar** displays and writes the preference;
+- launching the unpacked build again restores the hidden window.
+
+Not rerun for this artifact: the 38 model checks, 31 browser scenarios, 11 macOS Electron checks, the packaged-graphic audit, and the CrossOver Windows runtime workflow. Those results below describe the `0.1.0` artifact. The multi-window persistence failure is unchanged in the source and remains open.
+
+## 0.1.0 decision (last full audit)
+
+**The `0.1.0` executable is published as an experimental pre-release at the maintainer's explicit request.** A Windows-executable runtime test reproduced loss of a newly entered task with a second window open. This remains unresolved and blocks treating the build as stable. Use disposable example data only. Publication is not a claim that the failing check has passed or that the app is safe for important tasks.
 
 Release: [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1). Application version inside the executable: `0.1.0`.
 

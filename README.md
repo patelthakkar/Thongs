@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.1.0-438de7?style=flat-square" alt="Version 0.1.0">
+  <img src="https://img.shields.io/badge/version-0.2.0-438de7?style=flat-square" alt="Version 0.2.0">
   <img src="https://img.shields.io/badge/platform-Windows_10%2F11_x64-303a49?style=flat-square" alt="Target platform: Windows 10 and 11, 64-bit">
   <img src="https://img.shields.io/badge/data-local_only-317568?style=flat-square" alt="App data stays local">
 </p>
@@ -25,8 +25,8 @@
 > **Experimental preview—known data-loss risk.** A newly entered task can disappear with a second window open. Use disposable example data only, not important tasks. This is not a stable release. See [verification notes](docs/VERIFICATION.md).
 
 <p align="center">
-  <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/Thongs-Local-0.1.0-Windows-x64.exe"><strong>Download experimental preview · Windows x64</strong></a><br>
-  <sub><a href="https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1">Release notes</a> · <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/SHA256SUMS.txt">SHA-256 checksums</a></sub>
+  <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/Thongs-Local-0.2.0-Windows-x64.exe"><strong>Download 0.2.0 · Windows x64</strong></a><br>
+  <sub><a href="https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0">Release notes</a> · <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/SHA256SUMS.txt">SHA-256 checksums</a></sub>
 </p>
 
 <picture>
@@ -88,15 +88,15 @@ The images above are captures of the app's actual interface, rendered with ficti
 
 ## Availability
 
-**An experimental pre-release is available:** [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1). It contains the rebuilt `0.1.0` application, not a fix for the known multi-window persistence failure. Download it only for evaluation with disposable data.
+**A 0.2.0 build is available:** [v0.2.0](https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0). It adds the close-to-taskbar prompt, tray residency, and the **Exit to taskbar** setting to the `0.1.0` Windows shell, so Quick Entry keeps working after the window is closed. It does **not** fix the known multi-window persistence failure. Download it only for evaluation with disposable data.
 
 ### Installation
 
-1. Download the [Windows x64 executable](https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/Thongs-Local-0.1.0-Windows-x64.exe) and [SHA256SUMS.txt](https://github.com/patelthakkar/Thongs/releases/download/v0.1.0-preview.1/SHA256SUMS.txt).
+1. Download the [Windows x64 executable](https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/Thongs-Local-0.2.0-Windows-x64.exe) and [SHA256SUMS.txt](https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/SHA256SUMS.txt).
 2. In PowerShell, check the downloaded executable:
 
    ```powershell
-   Get-FileHash .\Thongs-Local-0.1.0-Windows-x64.exe -Algorithm SHA256
+   Get-FileHash .\Thongs-Local-0.2.0-Windows-x64.exe -Algorithm SHA256
    ```
 
    Compare the result with `SHA256SUMS.txt` and the release notes. If it differs, do not run the file.
@@ -119,13 +119,15 @@ Cloud sync, shared lists, connected calendars, mail capture, and mobile apps are
 
 ## Project status
 
-**Early-stage local build · version 0.1.0.** The interface and core workflows are implemented, but this is not a production-certified Windows release.
+**Early-stage local build · version 0.2.0.** The interface and core workflows are implemented, but this is not a production-certified Windows release.
 
-The current rebuild passes **38 model checks**, **31 browser scenarios**, **11 macOS Electron checks**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver successfully exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened. The maintainer has requested publication of this exact build as an experimental pre-release; the issue remains unresolved. See [verification notes](docs/VERIFICATION.md).
+The `0.1.0` shell passed **38 model checks**, **31 browser scenarios**, **11 macOS Electron checks**, and a package audit verifying that all 72 extracted graphics have original replacements and that dependency notices are included. Windows-executable testing under CrossOver exercises core workflows but **fails a multi-window persistence check**: a newly entered task can disappear after another window is opened.
+
+The `0.2.0` build changes only the Windows shell (close-to-taskbar, tray, Quick Entry) and was rebuilt on Windows 11 with Electron 45.0.0. It was smoke-tested for the first-close prompt, tray hide, Quick Entry, the Settings toggle, and the reported version. The full suite and the CrossOver persistence test were not rerun for `0.2.0`; the multi-window failure remains. See [verification notes](docs/VERIFICATION.md).
 
 Known limitations:
 
-- Reminders appear while the app is running; they do not fire after it closes.
+- Reminders fire while the app is running, including after the window is closed to the taskbar; they do not fire after **Quit**.
 - Multi-window editing is not currently safe for important data. Same-field conflict resolution is latest-save-wins, and a separate pending-save failure is under investigation.
 - Fonts, native controls, and some focus, hover, error, and animation states are not fully validated.
 

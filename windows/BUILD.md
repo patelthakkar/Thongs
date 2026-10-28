@@ -1,7 +1,7 @@
 # Building Thongs Local for Windows
 
-This folder holds the Windows desktop shell of **Thongs Local 0.1.0**, the build
-published as [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1),
+This folder holds the Windows desktop shell of **Thongs Local 0.2.0**, the build
+published as [v0.2.0](https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0),
 plus everything needed to package it again on Windows.
 
 ## What is in here
@@ -47,7 +47,7 @@ build, and electron-builder. `npm run dist:win` writes a portable executable
 to:
 
 ```text
-windows/release/Thongs-Local-0.1.0-Windows-x64.exe
+windows/release/Thongs-Local-0.2.0-Windows-x64.exe
 ```
 
 The file name matches the published asset. The bytes do not: timestamps,

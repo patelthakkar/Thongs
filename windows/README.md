@@ -1,6 +1,6 @@
 # Thongs Local — Windows source
 
-The desktop shell behind the published Windows preview of Thongs Local 0.1.0.
+The desktop shell behind the published Windows build of Thongs Local 0.2.0.
 It is a small Electron application: one local JSON library, no account, no
 network calls, no telemetry.
 
