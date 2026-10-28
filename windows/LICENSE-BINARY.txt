@@ -1,0 +1,26 @@
+Thongs Local — Binary Use License
+
+Copyright (c) 2026 Thongs project contributors. All rights reserved.
+
+The maintainer permits you to download and run the published Thongs Local binary
+for personal use and internal business use. No payment or account is required.
+
+This permission does not grant rights to redistribute, sublicense, sell, or
+publish modified versions of the application, or to access its unpublished
+development source. No open-source license is granted for the application.
+The distributed Electron package necessarily contains executable JavaScript;
+this is a binary distribution policy, not a promise of source-code secrecy.
+
+Third-party components remain governed by their own licenses, which take
+precedence for those components. See THIRD-PARTY-NOTICES.txt,
+LICENSE.electron.txt, and LICENSES.chromium.html included with the runtime.
+Nothing here restricts rights granted by those licenses or applicable law.
+
+THE APPLICATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NONINFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE CONTRIBUTORS
+ARE NOT LIABLE FOR CLAIMS, DAMAGES, OR OTHER LIABILITY ARISING FROM ITS USE.
+Keep independent backups of important data.
+
+Thongs is an independent project, not an official Things product or Windows
+port, and is not affiliated with or endorsed by Cultured Code.

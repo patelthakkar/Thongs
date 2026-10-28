@@ -104,7 +104,9 @@ The images above are captures of the app's actual interface, rendered with ficti
 
 The build targets **Windows 10/11, 64-bit**. The executable is unsigned; Windows may show a security warning or block execution. Verify its origin and checksum, and do not disable security protections or bypass organizational policy to launch it. Export a separate backup before trying this build with an existing local library.
 
-Development source remains private. This repository contains documentation and artwork; cloning it will not produce a runnable app. GitHub's automatically generated source archives contain this documentation repository, not the application's development source.
+### Build from source
+
+The Windows desktop shell and the packaging steps are published in [`windows/`](windows/README.md). The renderer is included there as a compiled bundle, so cloning this repository and following [BUILD.md](windows/BUILD.md) reproduces the packaged application, but the renderer's development source is still not published.
 
 ## Privacy & backups
 
@@ -133,7 +135,7 @@ Have a question or spotted something unclear? [Open an issue](https://github.com
 
 ## License & attribution
 
-Development source is not published. The [binary use license](LICENSE-BINARY.txt) permits running a published build for personal and internal business use; it does not grant an open-source license or permission to redistribute the application. Electron packages necessarily include executable JavaScript, so private development source is not a promise of protection against reverse engineering.
+The Windows desktop shell is published in [`windows/`](windows/README.md); the renderer ships there as compiled output. The [binary use license](LICENSE-BINARY.txt) permits running a published build for personal and internal business use; it does not grant an open-source license or permission to redistribute the application. Electron packages necessarily include executable JavaScript, so a published shell is not a promise of protection against reverse engineering.
 
 The banner and replacement interface graphics are original project artwork, not recolored vendor assets. React, React DOM, Scheduler, Lucide, Electron, and Chromium retain their own licenses; see [third-party notices](THIRD-PARTY-NOTICES.txt).
 
