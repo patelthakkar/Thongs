@@ -26,7 +26,7 @@
 
 <p align="center">
   <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/Thongs-Local-0.2.0-Windows-x64.exe"><strong>Download 0.2.0 · Windows x64</strong></a><br>
-  <sub><a href="https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0">Release notes</a> · <a href="https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/SHA256SUMS.txt">SHA-256 checksums</a></sub>
+  <sub><a href="https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0">Release notes and SHA-256</a></sub>
 </p>
 
 <picture>
@@ -92,14 +92,14 @@ The images above are captures of the app's actual interface, rendered with ficti
 
 ### Installation
 
-1. Download the [Windows x64 executable](https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/Thongs-Local-0.2.0-Windows-x64.exe) and [SHA256SUMS.txt](https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/SHA256SUMS.txt).
+1. Download the [Windows x64 executable](https://github.com/patelthakkar/Thongs/releases/download/v0.2.0/Thongs-Local-0.2.0-Windows-x64.exe). The SHA-256 is in the [release notes](https://github.com/patelthakkar/Thongs/releases/tag/v0.2.0).
 2. In PowerShell, check the downloaded executable:
 
    ```powershell
    Get-FileHash .\Thongs-Local-0.2.0-Windows-x64.exe -Algorithm SHA256
    ```
 
-   Compare the result with `SHA256SUMS.txt` and the release notes. If it differs, do not run the file.
+   Compare the result with the SHA-256 in the release notes. If it differs, do not run the file.
 3. Double-click the executable. No installer, Node.js installation, account, or runtime internet connection is required.
 
 The build targets **Windows 10/11, 64-bit**. The executable is unsigned; Windows may show a security warning or block execution. Verify its origin and checksum, and do not disable security protections or bypass organizational policy to launch it. Export a separate backup before trying this build with an existing local library.
