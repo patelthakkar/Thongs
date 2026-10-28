@@ -6,7 +6,7 @@
 
 Release: [v0.1.0-preview.1](https://github.com/patelthakkar/Thongs/releases/tag/v0.1.0-preview.1). Application version inside the executable: `0.1.0`.
 
-The work is limited to original artwork, presentation copy, and packaging/notices. No application persistence logic, storage key, application ID, library schema, or library location was changed. Development source remains outside this public repository.
+The work is limited to original artwork, presentation copy, and packaging/notices. No application persistence logic, storage key, application ID, library schema, or library location was changed. The Windows desktop shell for this build is published in [`windows/`](../windows/README.md); the renderer remains compiled output.
 
 ## Checks completed on the current rebuild
 
